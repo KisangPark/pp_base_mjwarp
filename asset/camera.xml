@@ -1,0 +1,10 @@
+<mujoco model="camera">
+
+    <worldbody>
+        <body name="camera_body" pos="0 0 2" euler="-1.0 0 0">
+            <camera name="main_camera" mode="fixed" pos="0 0 0.5"  fovy="45"/>
+        </body>
+    </worldbody>
+    
+
+</mujoco>
