@@ -12,12 +12,12 @@ def get_actuator_names (model, data):
     control_names = [mujoco.mj_id2name(model,mujoco.mjtObj.mjOBJ_ACTUATOR,ctrl_idx) for ctrl_idx in range(model.nu)]
     return control_names
 
-
-""" MUJOCO APPLY QPOS """
-
 def get_joint_names (model, data):
     joint_names = [mujoco.mj_id2name(model,mujoco.mjtObj.mjOBJ_JOINT,joint_idx) for joint_idx in range(model.njnt)]
     return joint_names
+
+
+""" MUJOCO APPLY QPOS """
 
 def apply_qpos_idxs (model, data, idxs, value):
     if len(idxs) != len(value):
